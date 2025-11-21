@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dc7b984f29f9b74bb6ea404a0f2105b, type: 3}
+  m_Name: ClassicFishBurger
+  m_EditorClassIdentifier: Assembly-CSharp::BurgerRecipe
+  _name: "\uD074\uB798\uC2DD \uD53C\uC26C \uBC84\uAC70"
+  _patty:
+  - {fileID: 11400000, guid: 1a6df222fc417e94ba8e5766f776b05d, type: 2}
+  _sauces:
+  - {fileID: 11400000, guid: 5bf076be41372e1479ef949d87180e1b, type: 2}
+  _topping: []
+  _vegetables:
+  - {fileID: 11400000, guid: 82dd1000f4aa7754ba8d15f942783096, type: 2}
+  - {fileID: 11400000, guid: e97410cf957d02148bc3b8e53ead7298, type: 2}
