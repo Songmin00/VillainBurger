@@ -6,4 +6,8 @@ public class Player
     private int _essence;
     private int _level;
 
+    public void MakeBurger()
+    {
+
+    }
 }

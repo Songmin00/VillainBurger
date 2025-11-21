@@ -1,6 +1,7 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class Vegetable : MonoBehaviour
+public class Vegetable
 {
     
 }
