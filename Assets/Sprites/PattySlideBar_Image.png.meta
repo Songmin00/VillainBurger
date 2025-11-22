@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5b80e99e56092d742a52148e00bb9f96
+guid: e0af9bc4872685243a63570221d31bb7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5334710899487224635
-    second: TeriyakiBottle_Image_0
+      213: -1302282660446978853
+    second: SlideBar_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -48,10 +48,10 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 1
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 512
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,23 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TeriyakiBottle_Image_0
+      name: SlideBar_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 8
-        width: 1022
-        height: 1523
+        x: 53
+        y: 53
+        width: 916
+        height: 234
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5ccc8a093bc47f5b0800000000000000
-      internalID: -5334710899487224635
+      spriteID: bdc38e2f1dc5dede0800000000000000
+      internalID: -1302282660446978853
       vertices: []
       indices: 
       edges: []
@@ -139,7 +139,7 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 0
+    internalID: 1537655665
     vertices: []
     indices: 
     edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      TeriyakiBottle_Image_0: -5334710899487224635
+      SlideBar_0: -1302282660446978853
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
