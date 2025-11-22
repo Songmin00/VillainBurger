@@ -1,6 +1,35 @@
 {
-    "version": 0,
+    "version": 1,
     "name": "PlayerAction",
-    "maps": [],
+    "maps": [
+        {
+            "name": "Minigame",
+            "id": "a7027571-642a-443d-a757-60425ef00a45",
+            "actions": [
+                {
+                    "name": "PressSpace",
+                    "type": "Button",
+                    "id": "638f0d83-153f-4c23-9e91-bfb7b8311daf",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "529e56ad-c240-4162-adc4-e116889738a3",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PressSpace",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
     "controlSchemes": []
 }
