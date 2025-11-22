@@ -3,9 +3,11 @@ using UnityEngine;
 
 public class IngredientPlace : MonoBehaviour
 {
-    public bool IsPlaced { get; set; }    
+    [SerializeField] MinigameManager _manager;
+    public bool IsPlaced { get; set; }   
     
-    public void SwitchPlaceMode()
+
+    public void GetPlaceMode()
     {
         if (transform.childCount > 0)
         {

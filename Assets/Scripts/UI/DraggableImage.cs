@@ -11,7 +11,7 @@ public class DraggableImage : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
     private Vector3 _originalTransform;
     [SerializeField] GameObject _ingredientPrefab;
     [SerializeField] IngredientPlace _targetPannel;
-    //[SerializeField] Transform _spawnPosition;
+    
 
     private void Awake()
     {        
@@ -74,8 +74,8 @@ public class DraggableImage : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
         CheckPlacing();
     }
 
-    public void CheckPlacing()
+    public void CheckPlacing()//배치상태를 바꿀때마다 해주어야 할 매서드
     {
-        _targetPannel.GetComponent<IngredientPlace>().SwitchPlaceMode();
+        _targetPannel.GetComponent<IngredientPlace>().GetPlaceMode();
     }
 }
