@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8c9558efd959e094a9a32bbc181248ab
+guid: 4c66cff5a6588a54b946698fa0163d82
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5679343028448448222
-    second: Customer_Women_Image_0
+      213: -1302282660446978853
+    second: SlideBar_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -48,7 +48,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 1
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -113,23 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Customer_Women_Image_0
+      name: SlideBar_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 7
-        width: 1024
-        height: 1524
+        x: 53
+        y: 53
+        width: 916
+        height: 234
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2213db72b9bee21b0800000000000000
-      internalID: -5679343028448448222
+      spriteID: bdc38e2f1dc5dede0800000000000000
+      internalID: -1302282660446978853
       vertices: []
       indices: 
       edges: []
@@ -139,7 +139,7 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 0
+    internalID: 1537655665
     vertices: []
     indices: 
     edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Customer_Women_Image_0: -5679343028448448222
+      SlideBar_0: -1302282660446978853
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
