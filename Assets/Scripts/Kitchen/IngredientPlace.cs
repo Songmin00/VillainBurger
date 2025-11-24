@@ -1,21 +1,30 @@
-using System;
 using UnityEngine;
 
 public class IngredientPlace : MonoBehaviour
 {
-    [SerializeField] MinigameManager _manager;
-    public bool IsPlaced { get; set; }   
-    
+    public MinigameManager _manager;
+    [SerializeField] BurgerPlace _burgerPlace;
 
-    public void GetPlaceMode()
+public virtual void PlayMinigame()
+    {
+        _manager.SetState(new IdleState(_manager));
+    }
+
+    public void TranslateImage()
     {
         if (transform.childCount > 0)
         {
-            IsPlaced = true;
+            transform.GetChild(0).position = _burgerPlace.CurrentPoint;
+            transform.GetChild(0).parent = _burgerPlace.transform;
+            _burgerPlace.Sort();
         }
-        else
+    }
+
+    public void RemoveImage()
+    {
+        if (transform.childCount > 0)
         {
-            IsPlaced = false;
+            Destroy(transform.GetChild(transform.childCount - 1).gameObject);
         }
-    }    
+    }
 }
