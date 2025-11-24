@@ -53,26 +53,16 @@ public class PattyMinigame : IMinigameState
         {
             Debug.Log("성공!");
             _manager.SetState(new IdleState(_manager));
-            _manager.PattyPlace.TranslateImage();
+            _manager.PlaceManager.WinPattyMinigame();            
         }
 
         else
         {
             Debug.Log("실패");
             _manager.SetState(new IdleState(_manager));
-            _manager.PattyPlace.RemoveImage();
-            _manager.MyBurger.RemoveIngredient();
-            
-            //Restart();
+            _manager.PlaceManager.FailPattyMinigame();
         }
-    }
-
-    // 재시작 기능
-    public void Restart()
-    {
-        isRunning = true;
-    }
-
+    }    
 
     //쓰지 않는 매서드
     public void GetUpArrow(InputAction.CallbackContext ctx)

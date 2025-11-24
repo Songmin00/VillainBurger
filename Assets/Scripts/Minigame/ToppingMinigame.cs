@@ -46,7 +46,7 @@ public class ToppingMinigame : IMinigameState
         if (_randomCommand.Count == 0)
         {
             Debug.Log("성공!");
-            _manager.SetState(new IdleState(_manager));
+            _manager.SetState(new IdleState(_manager));            
         }
     }
 
@@ -88,9 +88,8 @@ public class ToppingMinigame : IMinigameState
         else
         {
             Debug.Log("실패");
-            _manager.BurgerPlace.RemoveImage();
-            _manager.MyBurger.RemoveIngredient();
             _manager.SetState(new IdleState(_manager));
+            _manager.PlaceManager.FailToppingMinigame();
         }
     }
 

@@ -245,142 +245,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &44301449
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 44301450}
-  - component: {fileID: 44301452}
-  - component: {fileID: 44301451}
-  m_Layer: 5
-  m_Name: Text (TMP)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &44301450
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 44301449}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 627781755}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000015259, y: -87}
-  m_SizeDelta: {x: 995.8388, y: 125.0323}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &44301451
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 44301449}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_text: Press Correct Key From Left !
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 72
-  m_fontSizeBase: 72
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_TextWrappingMode: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 0
-  m_ActiveFontFeatures: 6e72656b
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_EmojiFallbackSupport: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &44301452
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 44301449}
-  m_CullTransparentMesh: 1
 --- !u!1 &66916659
 GameObject:
   m_ObjectHideFlags: 0
@@ -469,12 +333,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51994ed11aabcda4aa313533cc933cc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DraggableVegetable
-  _myBurger: {fileID: 708914079}
-  _ingredientPrefab: {fileID: 6420957679813668617, guid: 8a9abbd64dd717d4698ff1cc109354fb, type: 3}
-  _targetPlace: {fileID: 1529609226}
+  _manager: {fileID: 536903289}
+  _ingredientPrefab: {fileID: 8264920044075078283, guid: 675d5f521425ab145a81bce0923ccd13, type: 3}
+  _target: {fileID: 1825095338}
   _stat: {fileID: 11400000, guid: e97410cf957d02148bc3b8e53ead7298, type: 2}
-  _choppedPrefab: {fileID: 8264920044075078283, guid: 675d5f521425ab145a81bce0923ccd13, type: 3}
-  _burgerPlace: {fileID: 1825095341}
+  _rawPrefab: {fileID: 6420957679813668617, guid: 8a9abbd64dd717d4698ff1cc109354fb, type: 3}
+  _targetInRaw: {fileID: 1529609223}
 --- !u!1 &80395333
 GameObject:
   m_ObjectHideFlags: 0
@@ -1666,10 +1530,59 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea7d45631f5f02d4c976992a33ad3659, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DraggableImage
-  _myBurger: {fileID: 708914079}
+  _manager: {fileID: 536903289}
   _ingredientPrefab: {fileID: 8231891903663819573, guid: d9909fffd5d863e468c39ccf6d8a54b8, type: 3}
-  _targetPlace: {fileID: 1825095341}
+  _target: {fileID: 1825095338}
   _stat: {fileID: 11400000, guid: 548c9ecec52db194ca8a65dbf012f21b, type: 2}
+--- !u!1 &536903288
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 536903290}
+  - component: {fileID: 536903289}
+  m_Layer: 0
+  m_Name: PlaceManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &536903289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536903288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96665f47b6c0b5a40964494fc9337da6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlaceManager
+  _myburger: {fileID: 708914079}
+  _manager: {fileID: 1673704477}
+  _pattyPlace: {fileID: 743409406}
+  _burgerPlace: {fileID: 1825095338}
+  _vegetablePlace: {fileID: 1529609223}
+--- !u!4 &536903290
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536903288}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &627781754
 GameObject:
   m_ObjectHideFlags: 0
@@ -1701,7 +1614,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 528191217}
-  - {fileID: 44301450}
   m_Father: {fileID: 902854691}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1881,7 +1793,6 @@ GameObject:
   - component: {fileID: 743409406}
   - component: {fileID: 743409408}
   - component: {fileID: 743409407}
-  - component: {fileID: 743409409}
   m_Layer: 5
   m_Name: PattyPlace
   m_TagString: Untagged
@@ -1946,20 +1857,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 743409405}
   m_CullTransparentMesh: 1
---- !u!114 &743409409
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 743409405}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c512b586bce223c4a83f13f6061ed25d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PattyPlace
-  _manager: {fileID: 1673704477}
-  _burgerPlace: {fileID: 1825095341}
 --- !u!1 &786859904
 GameObject:
   m_ObjectHideFlags: 0
@@ -2045,12 +1942,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 786859904}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e9847cb99cc58848a27efdcf1895cf7, type: 3}
+  m_Script: {fileID: 11500000, guid: ea7d45631f5f02d4c976992a33ad3659, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DraggableTopping
-  _myBurger: {fileID: 708914079}
+  m_EditorClassIdentifier: Assembly-CSharp::DraggableImage
+  _manager: {fileID: 536903289}
   _ingredientPrefab: {fileID: 8939346746047790644, guid: 1be3a5a902a41df4da67c0464d9bfdf3, type: 3}
-  _targetPlace: {fileID: 1825095341}
+  _target: {fileID: 1825095338}
   _stat: {fileID: 11400000, guid: 97d78a773a76bb34ca2005ed523e60d1, type: 2}
 --- !u!1 &807099558
 GameObject:
@@ -2414,7 +2311,6 @@ RectTransform:
   - {fileID: 1383889886}
   - {fileID: 2047831624}
   - {fileID: 1879213588}
-  - {fileID: 1440997122}
   - {fileID: 442801132}
   m_Father: {fileID: 902854691}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2775,9 +2671,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc54e5c6b96cd9e41ac13424669e93d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DraggablePatty
-  _myBurger: {fileID: 708914079}
+  _manager: {fileID: 536903289}
   _ingredientPrefab: {fileID: 8177609588008798207, guid: 075eeefdb980fac44a45308145c464f9, type: 3}
-  _targetPlace: {fileID: 743409409}
+  _target: {fileID: 743409406}
   _stat: {fileID: 11400000, guid: 54232cad29a86074c8cec7b29ca9a2a1, type: 2}
 --- !u!1 &961348877
 GameObject:
@@ -2867,9 +2763,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea7d45631f5f02d4c976992a33ad3659, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DraggableImage
-  _myBurger: {fileID: 708914079}
+  _manager: {fileID: 536903289}
   _ingredientPrefab: {fileID: 1254727377129061835, guid: 0ce4f69d0cb13a94c87b0e277e0bdf26, type: 3}
-  _targetPlace: {fileID: 1825095341}
+  _target: {fileID: 1825095338}
   _stat: {fileID: 11400000, guid: 7650a343191afd640af9b41a3786430a, type: 2}
 --- !u!1 &990411247
 GameObject:
@@ -3023,12 +2919,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51994ed11aabcda4aa313533cc933cc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DraggableVegetable
-  _myBurger: {fileID: 708914079}
-  _ingredientPrefab: {fileID: 5501596276494517886, guid: 26a1065cb3e235643b88a799d99b7f64, type: 3}
-  _targetPlace: {fileID: 1529609226}
+  _manager: {fileID: 536903289}
+  _ingredientPrefab: {fileID: 3844094680212949720, guid: 3f8af1daf7f54a3439901684407c1437, type: 3}
+  _target: {fileID: 1825095338}
   _stat: {fileID: 11400000, guid: 82dd1000f4aa7754ba8d15f942783096, type: 2}
-  _choppedPrefab: {fileID: 3844094680212949720, guid: 3f8af1daf7f54a3439901684407c1437, type: 3}
-  _burgerPlace: {fileID: 1825095341}
+  _rawPrefab: {fileID: 5501596276494517886, guid: 26a1065cb3e235643b88a799d99b7f64, type: 3}
+  _targetInRaw: {fileID: 1529609223}
 --- !u!1 &1109253849
 GameObject:
   m_ObjectHideFlags: 0
@@ -3117,12 +3013,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51994ed11aabcda4aa313533cc933cc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DraggableVegetable
-  _myBurger: {fileID: 708914079}
-  _ingredientPrefab: {fileID: 5126601576252775919, guid: 3f9b24979685a4343a086b3c5e13af62, type: 3}
-  _targetPlace: {fileID: 1529609226}
+  _manager: {fileID: 536903289}
+  _ingredientPrefab: {fileID: 7924796512267601636, guid: 9bac3da67d7137044882fc1add5ff3a1, type: 3}
+  _target: {fileID: 1825095338}
   _stat: {fileID: 11400000, guid: e643279e9af37cd48b0c22cf95a1c1cd, type: 2}
-  _choppedPrefab: {fileID: 7924796512267601636, guid: 9bac3da67d7137044882fc1add5ff3a1, type: 3}
-  _burgerPlace: {fileID: 1825095341}
+  _rawPrefab: {fileID: 5126601576252775919, guid: 3f9b24979685a4343a086b3c5e13af62, type: 3}
+  _targetInRaw: {fileID: 1529609223}
 --- !u!1 &1243737248
 GameObject:
   m_ObjectHideFlags: 0
@@ -3284,12 +3180,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1312770320}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e9847cb99cc58848a27efdcf1895cf7, type: 3}
+  m_Script: {fileID: 11500000, guid: ea7d45631f5f02d4c976992a33ad3659, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DraggableTopping
-  _myBurger: {fileID: 708914079}
+  m_EditorClassIdentifier: Assembly-CSharp::DraggableImage
+  _manager: {fileID: 536903289}
   _ingredientPrefab: {fileID: 7495909597950537411, guid: 37b3242051b18a24f8d37facfcc73a4d, type: 3}
-  _targetPlace: {fileID: 1825095341}
+  _target: {fileID: 1825095338}
   _stat: {fileID: 11400000, guid: 06ff7956dc7357a44885f334c11c3e38, type: 2}
 --- !u!1 &1313526604
 GameObject:
@@ -3467,9 +3363,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea7d45631f5f02d4c976992a33ad3659, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DraggableImage
-  _myBurger: {fileID: 708914079}
+  _manager: {fileID: 536903289}
   _ingredientPrefab: {fileID: 3732382999168769736, guid: d5d00322a2c74f14b97dbe34d18ed9d8, type: 3}
-  _targetPlace: {fileID: 1825095341}
+  _target: {fileID: 1825095338}
   _stat: {fileID: 11400000, guid: 394a5b97de38aa148b5a3d6d944a3ec9, type: 2}
 --- !u!1 &1337625318
 GameObject:
@@ -3918,146 +3814,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc54e5c6b96cd9e41ac13424669e93d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DraggablePatty
-  _myBurger: {fileID: 708914079}
+  _manager: {fileID: 536903289}
   _ingredientPrefab: {fileID: 445307704917222888, guid: b12b305780da3bb4e80693e7d3e3f898, type: 3}
-  _targetPlace: {fileID: 743409409}
+  _target: {fileID: 743409406}
   _stat: {fileID: 11400000, guid: 1a6df222fc417e94ba8e5766f776b05d, type: 2}
---- !u!1 &1440997121
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1440997122}
-  - component: {fileID: 1440997124}
-  - component: {fileID: 1440997123}
-  m_Layer: 5
-  m_Name: Text (TMP)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1440997122
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1440997121}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 917134752}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 25.5, y: -22.8}
-  m_SizeDelta: {x: 57.38831, y: 14.599}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1440997123
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1440997121}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_text: Spam it !
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 10
-  m_fontSizeBase: 10
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_TextWrappingMode: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 0
-  m_ActiveFontFeatures: 6e72656b
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_EmojiFallbackSupport: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &1440997124
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1440997121}
-  m_CullTransparentMesh: 1
 --- !u!1 &1485522589
 GameObject:
   m_ObjectHideFlags: 0
@@ -4146,9 +3906,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc54e5c6b96cd9e41ac13424669e93d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DraggablePatty
-  _myBurger: {fileID: 708914079}
+  _manager: {fileID: 536903289}
   _ingredientPrefab: {fileID: 8422481219631640829, guid: ff3455b01c5b2414ca16ac0404481d3b, type: 3}
-  _targetPlace: {fileID: 743409409}
+  _target: {fileID: 743409406}
   _stat: {fileID: 11400000, guid: e519a14be4cd28a47bbc14b63e3b20ce, type: 2}
 --- !u!1 &1510171911
 GameObject:
@@ -4283,9 +4043,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc54e5c6b96cd9e41ac13424669e93d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DraggablePatty
-  _myBurger: {fileID: 708914079}
+  _manager: {fileID: 536903289}
   _ingredientPrefab: {fileID: 4678996757826763393, guid: b1c78be054a40214bb08725f743dcc30, type: 3}
-  _targetPlace: {fileID: 743409409}
+  _target: {fileID: 743409406}
   _stat: {fileID: 11400000, guid: 38b0eb2b1edc4624185398776299cafc, type: 2}
 --- !u!1 &1519682045
 GameObject:
@@ -4374,7 +4134,6 @@ GameObject:
   - component: {fileID: 1529609223}
   - component: {fileID: 1529609225}
   - component: {fileID: 1529609224}
-  - component: {fileID: 1529609226}
   m_Layer: 5
   m_Name: VegetablePlace
   m_TagString: Untagged
@@ -4438,156 +4197,6 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1529609222}
-  m_CullTransparentMesh: 1
---- !u!114 &1529609226
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1529609222}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52311dec23590dd47ad0fadfd875c195, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::VegetablePlace
-  _manager: {fileID: 1673704477}
-  _burgerPlace: {fileID: 1825095341}
---- !u!1 &1529660055
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1529660056}
-  - component: {fileID: 1529660058}
-  - component: {fileID: 1529660057}
-  m_Layer: 5
-  m_Name: Text (TMP)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1529660056
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1529660055}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1866897178}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 28.88887, y: -22.555542}
-  m_SizeDelta: {x: 80.502, y: 14.599}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1529660057
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1529660055}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_text: Press in Green !
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 10
-  m_fontSizeBase: 10
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_TextWrappingMode: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 0
-  m_ActiveFontFeatures: 6e72656b
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_EmojiFallbackSupport: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &1529660058
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1529660055}
   m_CullTransparentMesh: 1
 --- !u!1 &1545528824
 GameObject:
@@ -4841,9 +4450,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea7d45631f5f02d4c976992a33ad3659, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DraggableImage
-  _myBurger: {fileID: 708914079}
+  _manager: {fileID: 536903289}
   _ingredientPrefab: {fileID: 3560117318875028257, guid: 997a6581b62681840bd06b57cfbf4721, type: 3}
-  _targetPlace: {fileID: 1825095341}
+  _target: {fileID: 1825095338}
   _stat: {fileID: 11400000, guid: 9f19a1fbe206cf84282a1331a04b8040, type: 2}
 --- !u!1 &1579421470
 GameObject:
@@ -5087,9 +4696,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea7d45631f5f02d4c976992a33ad3659, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DraggableImage
-  _myBurger: {fileID: 708914079}
+  _manager: {fileID: 536903289}
   _ingredientPrefab: {fileID: 5684547286448876961, guid: 95300ed5ce04405498f9b1784c39704c, type: 3}
-  _targetPlace: {fileID: 1825095341}
+  _target: {fileID: 1825095338}
   _stat: {fileID: 11400000, guid: d388a804350a81944a5c69b2eb985f8e, type: 2}
 --- !u!1 &1640313355
 GameObject:
@@ -5196,16 +4805,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93236cc506cd4904c9e812e5e7b260b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MinigameManager
-  MyBurger: {fileID: 708914079}
-  PattyPlace: {fileID: 743409409}
+  PlaceManager: {fileID: 536903289}
   PattySlider: {fileID: 1866897177}
   SlideSpeed: 2
-  VegetablePlace: {fileID: 1529609226}
   VegetableSlider: {fileID: 917134751}
   FirstPoint: 0.3
   MinusSpeed: 1
   PlusValue: 0.15
-  BurgerPlace: {fileID: 1825095341}
   CommandPannel: {fileID: 528191217}
   UpArrowImage: {fileID: -1811210087642612499, guid: 2262081fba5d5b74eb6afd362f20e8a3, type: 3}
   DownArrowImage: {fileID: 6132410316966690854, guid: e8ada66abfcd21645bb6feb8ad94bfca, type: 3}
@@ -5425,9 +5031,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea7d45631f5f02d4c976992a33ad3659, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DraggableImage
-  _myBurger: {fileID: 708914079}
+  _manager: {fileID: 536903289}
   _ingredientPrefab: {fileID: 2269166699222418926, guid: c453dc140ce92ea488d01dc2ea90683e, type: 3}
-  _targetPlace: {fileID: 1825095341}
+  _target: {fileID: 1825095338}
   _stat: {fileID: 11400000, guid: 5bf076be41372e1479ef949d87180e1b, type: 2}
 --- !u!1 &1816172333
 GameObject:
@@ -5593,9 +5199,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7714ca28dfc86c941b2bf9697d89fc16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DraggableBun
-  _myBurger: {fileID: 708914079}
+  _manager: {fileID: 536903289}
   _ingredientPrefab: {fileID: 6636798659994859764, guid: fc9964ba3ab287441bcd3d66e22ee037, type: 3}
-  _targetPlace: {fileID: 1825095341}
+  _target: {fileID: 1825095338}
   _stat: {fileID: 11400000, guid: af3084451e05d7d4dac319b6e5da704e, type: 2}
   _topBunPrefab: {fileID: 1673020659711251698, guid: 6e0d537253639a24ca5606e117f25e45, type: 3}
 --- !u!1 &1825095337
@@ -5609,7 +5215,6 @@ GameObject:
   - component: {fileID: 1825095338}
   - component: {fileID: 1825095340}
   - component: {fileID: 1825095339}
-  - component: {fileID: 1825095341}
   m_Layer: 5
   m_Name: BurgerPlace
   m_TagString: Untagged
@@ -5674,20 +5279,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1825095337}
   m_CullTransparentMesh: 1
---- !u!114 &1825095341
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1825095337}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9111d5b56d3ec5245ad8bc461d17b42d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BurgerPlace
-  _manager: {fileID: 1673704477}
-  _burgerPlace: {fileID: 1825095341}
 --- !u!1 &1859597430
 GameObject:
   m_ObjectHideFlags: 0
@@ -5773,12 +5364,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1859597430}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e9847cb99cc58848a27efdcf1895cf7, type: 3}
+  m_Script: {fileID: 11500000, guid: ea7d45631f5f02d4c976992a33ad3659, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DraggableTopping
-  _myBurger: {fileID: 708914079}
+  m_EditorClassIdentifier: Assembly-CSharp::DraggableImage
+  _manager: {fileID: 536903289}
   _ingredientPrefab: {fileID: 6495329350069911461, guid: 35530d424ffe3214fa91f620771c4c6e, type: 3}
-  _targetPlace: {fileID: 1825095341}
+  _target: {fileID: 1825095338}
   _stat: {fileID: 11400000, guid: d9dd06f8bfc2c6947804ef303d7fb0f3, type: 2}
 --- !u!1 &1866897177
 GameObject:
@@ -5812,7 +5403,6 @@ RectTransform:
   - {fileID: 807099559}
   - {fileID: 837262935}
   - {fileID: 29091972}
-  - {fileID: 1529660056}
   - {fileID: 895944132}
   m_Father: {fileID: 902854691}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6144,12 +5734,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1994924196}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e9847cb99cc58848a27efdcf1895cf7, type: 3}
+  m_Script: {fileID: 11500000, guid: ea7d45631f5f02d4c976992a33ad3659, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DraggableTopping
-  _myBurger: {fileID: 708914079}
+  m_EditorClassIdentifier: Assembly-CSharp::DraggableImage
+  _manager: {fileID: 536903289}
   _ingredientPrefab: {fileID: 2616502167438410655, guid: c25715bc41722b04faf90de7d77766d0, type: 3}
-  _targetPlace: {fileID: 1825095341}
+  _target: {fileID: 1825095338}
   _stat: {fileID: 11400000, guid: b64149610400c74489d809fd14c9abdc, type: 2}
 --- !u!1 &2021157041
 GameObject:
@@ -6318,3 +5908,4 @@ SceneRoots:
   - {fileID: 1673704478}
   - {fileID: 1510171914}
   - {fileID: 708914080}
+  - {fileID: 536903290}

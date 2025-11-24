@@ -4,22 +4,19 @@ using UnityEngine.UI;
 
 public class MinigameManager : MonoBehaviour
 {
-    public MyBurger MyBurger;
+    public PlaceManager PlaceManager;
 
     [Header("패티 미니게임 필드")]
-    public PattyPlace PattyPlace;
     public GameObject PattySlider;
     public float SlideSpeed = 2f;
      
     [Header("채소 미니게임 필드")]
-    public VegetablePlace VegetablePlace;
     public GameObject VegetableSlider;
     public float FirstPoint = 0.3f;
     public float MinusSpeed = 1f;
     public float PlusValue = 0.15f;
 
     [Header("토핑 미니게임 필드")]
-    public BurgerPlace BurgerPlace;
     public Transform CommandPannel;    
     public Sprite UpArrowImage;
     public Sprite DownArrowImage;

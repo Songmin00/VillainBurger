@@ -4,6 +4,7 @@ using UnityEngine.EventSystems;
 public class DraggableBun : DraggableImage
 {
     [SerializeField] GameObject _topBunPrefab;
+
     public override void OnEndDrag(PointerEventData eventData)
     {
         // 부모, 위치 원복, 타겟이 맞다면 추가로 프리팹 생성
@@ -12,26 +13,16 @@ public class DraggableBun : DraggableImage
         transform.SetParent(_originalParent);
         transform.localPosition = _originalTransform;
 
-        if (IsDroppdeOnTarget(eventData, _targetPlace))
+        if (IsDroppdeOnTarget(eventData, _target))
         {
-            if (_targetPlace.transform.childCount == 0)
+            if (_target.transform.childCount == 0)
             {
-                SpawnIngredient();
-                _targetPlace.GetComponent<BurgerPlace>().Sort();
+                _manager.PlaceIngredient(_stat, _ingredientPrefab);
             }
             else
             {
-                SpawnTopBun();
-                _targetPlace.GetComponent<BurgerPlace>().Sort();
+                _manager.PlaceIngredient(_stat, _topBunPrefab);
             }            
-        }
-        
-    }
-
-    private void SpawnTopBun()
-    {
-        GameObject ing = Instantiate(_topBunPrefab, _targetPlace.transform.position, _targetPlace.transform.rotation);
-        ing.transform.SetParent(_targetPlace.transform);        
-    }
-    
+        }        
+    }    
 }

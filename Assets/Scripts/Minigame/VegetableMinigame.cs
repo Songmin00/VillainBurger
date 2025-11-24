@@ -43,8 +43,8 @@ public class VegetableMinigame : IMinigameState
         {
             Debug.Log("¼º°ø!");
             isRunning = false;
-            _manager.VegetablePlace.RemoveImage();
             _manager.SetState(new IdleState(_manager));
+            _manager.PlaceManager.WinVegetableMinigame();
         }
         else if (isRunning)
         {

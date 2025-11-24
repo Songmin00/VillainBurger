@@ -3,8 +3,9 @@ using UnityEngine.EventSystems;
 
 public class DraggableVegetable : DraggableImage
 {
-    [SerializeField] protected GameObject _choppedPrefab;
-    [SerializeField] protected IngredientPlace _burgerPlace;
+    [SerializeField] protected GameObject _rawPrefab;
+    [SerializeField] protected Transform _targetInRaw;
+
 
     public override void OnEndDrag(PointerEventData eventData)
     {
@@ -14,22 +15,13 @@ public class DraggableVegetable : DraggableImage
         transform.SetParent(_originalParent);
         transform.localPosition = _originalTransform;
 
-        if (IsDroppdeOnTarget(eventData, _targetPlace))
+        if (IsDroppdeOnTarget(eventData, _target))
         {
-            SpawnIngredient();
-            StartMinigame();
+            _manager.PlaceIngredient(_stat, _ingredientPrefab);
         }
-        else if (IsDroppdeOnTarget(eventData, _burgerPlace))
+        else if (IsDroppdeOnTarget(eventData, _targetInRaw))
         {
-            SpawnChoppedOne();
-            _myBurger.AddIngredient(_stat);
+            _manager.PrepareVegetable(_rawPrefab);
         }
-    }
-
-    private void SpawnChoppedOne()
-    {
-        GameObject ing = Instantiate(_choppedPrefab, _burgerPlace.transform.position, _burgerPlace.transform.rotation);
-        ing.transform.SetParent(_burgerPlace.transform);
-        _burgerPlace.GetComponent<BurgerPlace>().Sort();
-    }
+    }   
 }

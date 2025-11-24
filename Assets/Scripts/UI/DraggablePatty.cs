@@ -11,11 +11,9 @@ public class DraggablePatty : DraggableImage
         transform.SetParent(_originalParent);
         transform.localPosition = _originalTransform;
 
-        if (IsDroppdeOnTarget(eventData, _targetPlace))
+        if (IsDroppdeOnTarget(eventData, _target))
         {
-            SpawnIngredient();
-            _myBurger.AddIngredient(_stat);
-            StartMinigame();
+            _manager.PlacePattyInGrill(_stat, _ingredientPrefab);
         }
     }
 }
