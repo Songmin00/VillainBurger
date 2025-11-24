@@ -3,14 +3,17 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
-
+// 소스는 그냥 이거 붙여서 쓰기, 나머지 재료는 상속 Draggable~~~ 써야함.
 public class DraggableImage : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    private Transform _originalParent;
-    private CanvasGroup _canvasGroup;
-    private Vector3 _originalTransform;
-    [SerializeField] GameObject _ingredientPrefab;
-    [SerializeField] IngredientPlace _targetPannel;
+    protected Transform _originalParent;
+    protected CanvasGroup _canvasGroup;
+    protected Vector3 _originalTransform;
+    [SerializeField] protected MyBurger _myBurger;
+    [SerializeField] protected GameObject _ingredientPrefab;
+    [SerializeField] protected IngredientPlace _targetPlace;
+    [SerializeField] protected IngredientStat _stat;
+    
     
 
     private void Awake()
@@ -43,7 +46,7 @@ public class DraggableImage : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
             
     }
 
-    public void OnEndDrag(PointerEventData eventData)
+    public virtual void OnEndDrag(PointerEventData eventData)
     {
         // 부모, 위치 원복, 타겟이 맞다면 추가로 프리팹 생성
         _canvasGroup.alpha = 1f;//반투명 이미지 원복
@@ -51,31 +54,33 @@ public class DraggableImage : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
         transform.SetParent(_originalParent);
         transform.localPosition = _originalTransform;
 
-        if (IsDroppdeOnTarget(eventData) && !_targetPannel.IsPlaced)
+        if (IsDroppdeOnTarget(eventData, _targetPlace))
         {
             SpawnIngredient();
-        }             
+            _targetPlace.GetComponent<BurgerPlace>().Sort();
+            _myBurger.AddIngredient(_stat);
+        }
     }
 
     //타겟에 드롭시켰는지 판단할 매서드
-    public bool IsDroppdeOnTarget(PointerEventData eventData)
+    public bool IsDroppdeOnTarget(PointerEventData eventData, IngredientPlace target)
     {        
         if (eventData.pointerEnter == null)
         {
             return false;
         }
-        return eventData.pointerEnter.transform.IsChildOf(_targetPannel.transform);
+        return eventData.pointerEnter.transform.IsChildOf(target.transform);
     }
 
-    private void SpawnIngredient()
+    protected void SpawnIngredient()
     {
-        GameObject ing = Instantiate(_ingredientPrefab, _targetPannel.transform.position, _targetPannel.transform.rotation);
-        ing.transform.SetParent(_targetPannel.transform);
-        CheckPlacing();
+        GameObject ing = Instantiate(_ingredientPrefab, _targetPlace.transform.position, _targetPlace.transform.rotation);
+        ing.transform.SetParent(_targetPlace.transform);
+        _myBurger.AddIngredient(_stat);
     }
 
-    public void CheckPlacing()//배치상태를 바꿀때마다 해주어야 할 매서드
+    protected void StartMinigame()
     {
-        _targetPannel.GetComponent<IngredientPlace>().GetPlaceMode();
+        _targetPlace.GetComponent<IngredientPlace>().PlayMinigame();
     }
 }
