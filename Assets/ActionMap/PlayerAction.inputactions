@@ -14,6 +14,42 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "PressUpArrow",
+                    "type": "Button",
+                    "id": "2831c932-aa54-4c9c-94c5-f0c26d9af93b",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "PressDownArrow",
+                    "type": "Button",
+                    "id": "bc0a796a-8451-4d5e-8797-8e067910e1f3",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "PressLeftArrow",
+                    "type": "Button",
+                    "id": "4aa2a1f2-ae31-4c2c-ad05-ae84a67552dc",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "PressRightArrow",
+                    "type": "Button",
+                    "id": "20f52138-934a-4976-956d-dee0bfa8f138",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -25,6 +61,50 @@
                     "processors": "",
                     "groups": "",
                     "action": "PressSpace",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "aa52d1d0-7bd2-4e83-b215-566f418d93af",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PressDownArrow",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "deceffbe-2722-43ac-9254-40ad17640b0f",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PressUpArrow",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7e48e1b4-6866-49ee-a8a7-fd5cf5de74b7",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PressLeftArrow",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2f0c9eed-0011-4c94-be2a-1b6a2aebf642",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PressRightArrow",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
