@@ -7,6 +7,9 @@ public class IngredientStat : ScriptableObject
     [SerializeField] private string _name;
     [SerializeField] private string _description;
     [SerializeField] private int _price;
-    [SerializeField] private string _buffName;
-    [SerializeField] private float _buffValue;
+    
+    public IngredientType Type => _type;
+    public string Name => _name;
+    public string Description => _description;
+    public float Price => _price;
 }
