@@ -1,18 +1,21 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Player : MonoBehaviour
+public class Player : SingleTon<Player>
 {
-    private int _money;
-    private int _essence;
-    private int _level;
-    [SerializeField] private MinigameManager _minigameManager;
-        
-        
-    
+    public int Money { get; set; } = 100;
+    public int Essence { get; set; } = 100;
+    public int Level { get; set; } = 1;
 
-    public void PlayPatty()
+    public Dictionary<IngredientStat, int> Storage { get; set; } = new Dictionary<IngredientStat, int>();
+
+    protected override void Awake()
     {
-        _minigameManager.SetState(new PattyMinigame(_minigameManager));
+        base.Awake();
+        
     }
+
+
+
 }
