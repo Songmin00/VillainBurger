@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cca6de33ee4643e478a0d080929562ce, type: 3}
+  m_Name: BurgerMenu
+  m_EditorClassIdentifier: Assembly-CSharp::BurgerMenu
+  _allBurgers:
+  - {fileID: 11400000, guid: d8ab01f224c863c45af79b6a67b275fd, type: 2}
+  - {fileID: 11400000, guid: 0a66d5a8713a8e646b1be0f3d9967073, type: 2}
+  - {fileID: 11400000, guid: bc52eb0a2d3d87448b816cecb7cbd0b2, type: 2}
+  - {fileID: 11400000, guid: b0c53beeddeaa4f4284d3e0f0340ea59, type: 2}
+  - {fileID: 11400000, guid: 8ab93c9a42d63e545936052af07cca1c, type: 2}
+  - {fileID: 11400000, guid: 1687f6db0100f7e42bae69bd6ee0c35f, type: 2}
+  - {fileID: 11400000, guid: 86bc720290f88aa40bbeed3751d6bf00, type: 2}
+  - {fileID: 11400000, guid: bad376f8c4ed3ad43bdfb6bedc89a11d, type: 2}
+  - {fileID: 11400000, guid: b13333580ba4b1745b1d925ce89bbafa, type: 2}
+  - {fileID: 11400000, guid: 902ae07493c519048af94d523a438039, type: 2}
+  - {fileID: 11400000, guid: 57f728c975f0fff4dbab6d290aeb4984, type: 2}
+  - {fileID: 11400000, guid: 894c222f46931614180ba0717823632f, type: 2}
+  - {fileID: 11400000, guid: fe92a8116b1a9a947a4184e5001649d5, type: 2}
+  - {fileID: 11400000, guid: 72cff075757e59c41ae79c6105f7a31d, type: 2}
+  - {fileID: 11400000, guid: 376142a6648b4f8438cb923d01048f29, type: 2}
+  - {fileID: 11400000, guid: 03b8d5465ebd5bf4fb1fdfc1312b50f9, type: 2}

@@ -1,21 +1,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BurgerMenu : MonoBehaviour
+[CreateAssetMenu(fileName = "BurgerMenu", menuName = "Scriptable Objects/BurgerMenu")]
+public class BurgerMenu : ScriptableObject
 {
-    
-    [SerializeField] private List<BurgerRecipe> _allBurgers;
-    public List<BurgerRecipe> OrderableBurgers { get; set; }
+    private List<BurgerRecipe> _allBurgers;
 
-
-    private void Awake()
-    {
-        OrderableBurgers = new List<BurgerRecipe>();
-    }
-
-    private void Start()
-    {
-     
-    }
-
+    public List<BurgerRecipe> AllBurgers => _allBurgers;
 }
