@@ -337,6 +337,7 @@ MonoBehaviour:
   _ingredientPrefab: {fileID: 8264920044075078283, guid: 675d5f521425ab145a81bce0923ccd13, type: 3}
   _target: {fileID: 1825095338}
   _stat: {fileID: 11400000, guid: e97410cf957d02148bc3b8e53ead7298, type: 2}
+  _rawStat: {fileID: 11400000, guid: 78c4c03bcec8eef429695efdda65be7d, type: 2}
   _rawPrefab: {fileID: 6420957679813668617, guid: 8a9abbd64dd717d4698ff1cc109354fb, type: 3}
   _targetInRaw: {fileID: 1529609223}
 --- !u!1 &80395333
@@ -1564,7 +1565,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlaceManager
   _myburger: {fileID: 708914079}
-  _manager: {fileID: 1673704477}
+  _minigameManager: {fileID: 1673704477}
+  _poolManager: {fileID: 1907594216}
   _pattyPlace: {fileID: 743409406}
   _burgerPlace: {fileID: 1825095338}
   _vegetablePlace: {fileID: 1529609223}
@@ -1775,12 +1777,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 708914078}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.1, z: 0}
+  m_LocalScale: {x: 3.1999998, y: 3.4188037, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1825095338}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &743409405
 GameObject:
@@ -2923,6 +2925,7 @@ MonoBehaviour:
   _ingredientPrefab: {fileID: 3844094680212949720, guid: 3f8af1daf7f54a3439901684407c1437, type: 3}
   _target: {fileID: 1825095338}
   _stat: {fileID: 11400000, guid: 82dd1000f4aa7754ba8d15f942783096, type: 2}
+  _rawStat: {fileID: 11400000, guid: 29bcc43e9f541134698280973a5c0b45, type: 2}
   _rawPrefab: {fileID: 5501596276494517886, guid: 26a1065cb3e235643b88a799d99b7f64, type: 3}
   _targetInRaw: {fileID: 1529609223}
 --- !u!1 &1109253849
@@ -3017,6 +3020,7 @@ MonoBehaviour:
   _ingredientPrefab: {fileID: 7924796512267601636, guid: 9bac3da67d7137044882fc1add5ff3a1, type: 3}
   _target: {fileID: 1825095338}
   _stat: {fileID: 11400000, guid: e643279e9af37cd48b0c22cf95a1c1cd, type: 2}
+  _rawStat: {fileID: 11400000, guid: 7604df64bcdb6fb4fbe29646b385af8c, type: 2}
   _rawPrefab: {fileID: 5126601576252775919, guid: 3f9b24979685a4343a086b3c5e13af62, type: 3}
   _targetInRaw: {fileID: 1529609223}
 --- !u!1 &1243737248
@@ -5202,7 +5206,8 @@ MonoBehaviour:
   _manager: {fileID: 536903289}
   _ingredientPrefab: {fileID: 6636798659994859764, guid: fc9964ba3ab287441bcd3d66e22ee037, type: 3}
   _target: {fileID: 1825095338}
-  _stat: {fileID: 11400000, guid: af3084451e05d7d4dac319b6e5da704e, type: 2}
+  _stat: {fileID: 11400000, guid: e0124a1277e37a742bfbf8006478eed9, type: 2}
+  _topBunStat: {fileID: 11400000, guid: af3084451e05d7d4dac319b6e5da704e, type: 2}
   _topBunPrefab: {fileID: 1673020659711251698, guid: 6e0d537253639a24ca5606e117f25e45, type: 3}
 --- !u!1 &1825095337
 GameObject:
@@ -5233,7 +5238,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.3125, y: 0.2925, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 708914080}
   m_Father: {fileID: 1337625322}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -5573,6 +5579,50 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1907594215
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1907594217}
+  - component: {fileID: 1907594216}
+  m_Layer: 0
+  m_Name: PoolManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1907594216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1907594215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 736b5235a91605e419e9c0d279c7b906, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PoolManager
+--- !u!4 &1907594217
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1907594215}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1969669823
 GameObject:
   m_ObjectHideFlags: 0
@@ -5907,5 +5957,5 @@ SceneRoots:
   - {fileID: 902854691}
   - {fileID: 1673704478}
   - {fileID: 1510171914}
-  - {fileID: 708914080}
   - {fileID: 536903290}
+  - {fileID: 1907594217}

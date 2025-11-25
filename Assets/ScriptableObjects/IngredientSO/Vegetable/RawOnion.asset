@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8768b5694f48aa14caf5e7b37ee61dbc, type: 3}
-  m_Name: Bun
+  m_Name: RawOnion
   m_EditorClassIdentifier: Assembly-CSharp::IngredientBase
-  _type: 0
-  _name: "\uD584\uBC84\uAC70\uBE75"
-  _description: "\uD3C9\uBC94\uD55C \uD584\uBC84\uAC70 \uBE75\uC785\uB2C8\uB2E4."
+  _type: 2
+  _name: "\uC591\uD30C"
+  _description: "\uC815\uC131\uC744 \uB2E4\uD574 \uAE30\uB978 \uC591\uD30C\uC785\uB2C8\uB2E4."
   _price: 0
   _buffName: 
   _buffValue: 0
