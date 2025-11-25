@@ -3,17 +3,26 @@ using UnityEngine;
 
 public class PlaceManager : MonoBehaviour
 {
-    [SerializeField] MyBurger _myburger;
+    [Header("매니저")]
     [SerializeField] MinigameManager _minigameManager;
     [SerializeField] PoolManager _poolManager;
+
+    [Header("재료 배치 장소")]
     [SerializeField] Transform _pattyPlace;
     [SerializeField] Transform _burgerPlace;
     [SerializeField] Transform _vegetablePlace;
+
+    [Header("MyBurger")]
+    [SerializeField] MyBurger _myburger;
+
+
     private Vector2 _burgerPoint;
     private IngredientStat _currentStat;
     private int _currentSort;
     private GameObject _currentPrefab;
     private GameObject _currentInstance;
+
+
 
     private void Awake()
     {
@@ -26,21 +35,23 @@ public class PlaceManager : MonoBehaviour
     // 버거판에 배치할 땐 여기 호출
     public void PlaceIngredient(IngredientStat stat, GameObject prefab)
     {
-        _currentStat = stat;
-        AddInMyBurger(stat);
+        
         GetStatAndPrefab(stat, prefab);
         switch (stat.Type)
         {            
             case IngredientType.Vegetable:
                 MakeVegetable();
+                AddInMyBurger(stat);
                 break;
 
             case IngredientType.Topping:
                 MakeTopping();
+                AddInMyBurger(stat);
                 break;
 
             case IngredientType.Sauce:
                 MakeSauce();
+                AddInMyBurger(stat);
                 break;
 
             case IngredientType.Bun:
@@ -56,7 +67,7 @@ public class PlaceManager : MonoBehaviour
     // 채소를 도마로 배치할 땐 여기 호출
     public void PrepareVegetable(IngredientStat stat, GameObject prefab)
     {
-        GetStatAndPrefab(_currentStat, prefab);
+        GetStatAndPrefab(stat, prefab);
         _currentInstance = _poolManager.GetIngredient(_currentStat, _currentPrefab);
         _currentInstance.transform.position = _vegetablePlace.position;
         _currentInstance.transform.SetParent(_vegetablePlace.transform);
@@ -91,7 +102,6 @@ public class PlaceManager : MonoBehaviour
     {
         AddInMyBurger(_currentStat);
         ReplaceToBurger();
-        SetBurgerPoint();
         SetPrefabSort();
     }
 
@@ -188,6 +198,7 @@ public class PlaceManager : MonoBehaviour
             ing.transform.position = Vector3.Lerp(startPos, targetPos, pos);
             yield return null;
         }
+        SetBurgerPoint();
     }
 
     private void RemoveIngredient()
