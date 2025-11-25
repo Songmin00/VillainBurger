@@ -15,6 +15,4 @@ MonoBehaviour:
   _type: 3
   _name: "\uD53C\uD074"
   _description: "\uC774\uAC8C \uBE60\uC9C0\uBA74 \uC12D\uC12D\uD558\uC8E0."
-  _price: 0
-  _buffName: 
-  _buffValue: 0
+  _price: 10

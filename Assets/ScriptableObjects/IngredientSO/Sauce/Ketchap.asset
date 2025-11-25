@@ -16,6 +16,4 @@ MonoBehaviour:
   _name: "\uCF00\uCCA9"
   _description: "\uBAA8\uB450\uC5D0\uAC8C \uC0AC\uB791\uBC1B\uB294 \uD1A0\uB9C8\uD1A0
     \uCF00\uCCA9\uC785\uB2C8\uB2E4."
-  _price: 0
-  _buffName: 
-  _buffValue: 0
+  _price: 4
