@@ -52,15 +52,13 @@ public class PattyMinigame : IMinigameState
         if (pos > 0.45f && pos < 0.6f)
         {
             Debug.Log("성공!");
-            _manager.SetState(new IdleState(_manager));
-            _manager.PlaceManager.WinPattyMinigame();            
+            _manager.PlaceManager.WinPattyGame();            
         }
 
         else
         {
             Debug.Log("실패");
-            _manager.SetState(new IdleState(_manager));
-            _manager.PlaceManager.FailPattyMinigame();
+            _manager.PlaceManager.FailPattyGame();
         }
     }    
 

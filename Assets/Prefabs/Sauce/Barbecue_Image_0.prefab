@@ -41,6 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6360747157517428118}
   - component: {fileID: 4350944942419687393}
+  - component: {fileID: -3383563132163213204}
   m_Layer: 0
   m_Name: Barbecue_Image_0
   m_TagString: Untagged
@@ -122,3 +123,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-3383563132163213204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3560117318875028257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07067e633faed884c93caec47dd58465, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Ingredient
+  Stat: {fileID: 11400000, guid: 9f19a1fbe206cf84282a1331a04b8040, type: 2}

@@ -41,6 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4620691152018834075}
   - component: {fileID: 1734826605964444505}
+  - component: {fileID: -6020828945004259600}
   m_Layer: 0
   m_Name: ChickenPatty_Image_0
   m_TagString: Untagged
@@ -122,3 +123,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-6020828945004259600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8177609588008798207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07067e633faed884c93caec47dd58465, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Ingredient
+  Stat: {fileID: 11400000, guid: 54232cad29a86074c8cec7b29ca9a2a1, type: 2}

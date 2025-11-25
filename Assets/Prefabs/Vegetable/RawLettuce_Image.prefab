@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2375437671549591473}
   - component: {fileID: 456846027510619912}
+  - component: {fileID: 1715025609267629325}
   m_Layer: 0
   m_Name: RawLettuce_Image
   m_TagString: Untagged
@@ -90,3 +91,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1715025609267629325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5501596276494517886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07067e633faed884c93caec47dd58465, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Ingredient
+  Stat: {fileID: 11400000, guid: 29bcc43e9f541134698280973a5c0b45, type: 2}

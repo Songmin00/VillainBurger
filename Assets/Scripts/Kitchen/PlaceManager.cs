@@ -1,11 +1,13 @@
 using System.Collections;
 using UnityEngine;
 
+
+//미니게임 매니저의 상태 전환도 여기서 해야 함(각 미니게임에는 없게 할 것).
 public class PlaceManager : MonoBehaviour
 {
     [Header("매니저")]
     [SerializeField] MinigameManager _minigameManager;
-    [SerializeField] PoolManager _poolManager;
+    [SerializeField] IngredientPoolManager _poolManager;
 
     [Header("재료 배치 장소")]
     [SerializeField] Transform _pattyPlace;
@@ -30,59 +32,98 @@ public class PlaceManager : MonoBehaviour
         _currentSort = 0;
     }
 
-    #region 드래그 앤 드롭에서 호출하는 매서드
 
-    // 버거판에 배치할 땐 여기 호출
-    public void PlaceIngredient(IngredientStat stat, GameObject prefab)
+    #region DraggableImage에서 호출
+    //소스, 토핑, 손질채소, 빵 만들기 용 호출.
+    public void OnDroppedBurgerPlace(GameObject prefab)
     {
         
-        GetStatAndPrefab(stat, prefab);
-        switch (stat.Type)
-        {            
-            case IngredientType.Vegetable:
-                MakeVegetable();
-                AddInMyBurger(stat);
-                break;
-
-            case IngredientType.Topping:
-                MakeTopping();
-                AddInMyBurger(stat);
-                break;
-
-            case IngredientType.Sauce:
-                MakeSauce();
-                AddInMyBurger(stat);
-                break;
-
-            case IngredientType.Bun:
-                MakeBun();
-                break;
-
-            default:
+        IPoolable ing = MakeIngredient(prefab);
+        GameObject newIng = (ing as MonoBehaviour).gameObject;
+        newIng.transform.SetParent(_myburger.transform);
+        newIng.transform.position = _burgerPoint;
+        newIng.GetComponent<Renderer>().sortingOrder = ++_currentSort;
+        _burgerPoint = newIng.gameObject.transform.GetChild(0).transform.position;
+        switch (prefab.GetComponent<Ingredient>().Stat.Type)
+        {
+            case IngredientType.Patty:
                 Debug.Log("패티는 그릴로.");
                 break;
+            case IngredientType.Sauce:
+                break;
+            case IngredientType.Topping:
+                _minigameManager.SetState(new ToppingMinigame(_minigameManager));
+                break;
+            case IngredientType.Vegetable:
+                break;
+            case IngredientType.Bun:
+                if (_myburger.transform.childCount > 0)
+                {
+                    //버거 제출 매서드
+                }
+                break;
         }
     }
 
-    // 채소를 도마로 배치할 땐 여기 호출
-    public void PrepareVegetable(IngredientStat stat, GameObject prefab)
+    //그릴에 패티 배치
+    public void OnDroppedPattyPlace(GameObject patty)
     {
-        GetStatAndPrefab(stat, prefab);
-        _currentInstance = _poolManager.GetIngredient(_currentStat, _currentPrefab);
-        _currentInstance.transform.position = _vegetablePlace.position;
-        _currentInstance.transform.SetParent(_vegetablePlace.transform);
-        _minigameManager.SetState(new VegetableMinigame(_minigameManager));
-    }
-
-    // 패티를 그릴로 배치할 땐 여기 호출
-    public void PlacePattyInGrill(IngredientStat stat, GameObject prefab)
-    {
-        GetStatAndPrefab(stat, prefab);
-        _currentInstance = _poolManager.GetIngredient(_currentStat, _currentPrefab);
-        _currentInstance.transform.position = _pattyPlace.position;
-        _currentInstance.transform.SetParent(_pattyPlace.transform);
+        IPoolable ing = MakeIngredient(patty);
+        (ing as MonoBehaviour).transform.SetParent(_pattyPlace);
+        (ing as MonoBehaviour).transform.position = _pattyPlace.position;
         _minigameManager.SetState(new PattyMinigame(_minigameManager));
     }
+
+    //도마에 생채소 배치
+    public void OnDroppedVegetablePlace(GameObject rawVegetable)
+    {
+        IPoolable ing = MakeIngredient(rawVegetable);
+        (ing as MonoBehaviour).transform.position = _vegetablePlace.position;
+        _minigameManager.SetState(new VegetableMinigame(_minigameManager));
+    }
+    #endregion
+
+    #region 미니게임에서 호출
+    //패티 미니게임 성공 시
+    public void WinPattyGame()
+    {
+        Transform patty = _pattyPlace.GetChild(0);
+        patty.SetParent(_myburger.transform);
+        StartCoroutine(SlidePatty(patty));
+        patty.GetComponent<Renderer>().sortingOrder = ++_currentSort;
+        _burgerPoint = patty.transform.position;
+        _minigameManager.SetState(new IdleState(_minigameManager));
+    }
+
+    //채소 미니게임 성공시
+    public void WinVegetableGame()
+    {
+        Transform vegetable = _vegetablePlace.GetChild(0);
+        RemoveIngredientInPlace(_vegetablePlace);
+        //재고 갱신
+        _minigameManager.SetState(new IdleState(_minigameManager));
+    }
+
+    //토핑 미니게임 성공시
+    public void WinToppingGame()
+    {
+        _minigameManager.SetState(new IdleState(_minigameManager));
+    }
+
+    //패티 미니게임 실패시
+    public void FailPattyGame()
+    {
+        Transform patty = _pattyPlace.GetChild(0);
+        RemoveIngredientInPlace(patty);
+    }
+
+    //토핑 미니게임 실패시
+    public void FailToppingGame()
+    {
+        Transform topping = _myburger.transform.GetChild(_myburger.transform.childCount - 1);
+        RemoveIngredientInPlace(topping);
+        _burgerPoint = _myburger.transform.GetChild(_myburger.transform.childCount - 1).position;
+    }
     #endregion
 
 
@@ -90,157 +131,29 @@ public class PlaceManager : MonoBehaviour
 
 
 
-    #region 미니게임 매니저에서 호출하는 매서드
-    //채소 미니게임 성공 시 호출
-    public void WinVegetableMinigame()
+    //지역함수
+    private IPoolable MakeIngredient(GameObject prefab)
     {
-        RemoveIngredient();
+        return _poolManager.Get(prefab);
     }
 
-    //패티 미니게임 성공시 호출
-    public void WinPattyMinigame()
+    private void RemoveIngredientInPlace(Transform place)
     {
-        AddInMyBurger(_currentStat);
-        ReplaceToBurger();
-        SetPrefabSort();
+        _poolManager.Return(place.GetChild(place.childCount - 1).gameObject);
     }
-
-    //패티 미니게임 실패 시 호출
-    public void FailPattyMinigame()
+   
+    private IEnumerator SlidePatty(Transform patty)
     {
-        RemoveIngredient();
-    }
+        Vector3 startPos = patty.localPosition;
+        Vector3 endPos = _burgerPoint;
+        float current = 0;
 
-    //토핑 미니게임 실패 시 호출
-    public void FailToppingMinigame()
-    {
-        RemoveInMyBurger();
-        RemoveIngredient();
-        SetBurgerPoint();
-    }
-    #endregion
-
-
-
-
-
-
-
-    //이 아래부터는 private 지역함수
-    #region 종류별로 묶은 재료 배치용 지역함수
-    private void MakeTopping()
-    {
-        SpawnInMyBurger();
-        SetBurgerPoint();
-        SetPrefabSort();
-        _minigameManager.SetState(new ToppingMinigame(_minigameManager));
-    }
-
-    private void MakeSauce()
-    {
-        SpawnInMyBurger();
-        SetBurgerPoint();
-        SetPrefabSort();        
-    }
-
-    private void MakeVegetable()
-    {
-        SpawnInMyBurger();
-        SetBurgerPoint();
-        SetPrefabSort();
-    }
-
-    private void MakeBun()
-    {
-        Transform myBurger = _burgerPlace.GetChild(0);
-        SpawnInMyBurger();
-        SetBurgerPoint();
-        SetPrefabSort();
-        if (myBurger.childCount > 0)
+        while (current < 1)
         {
-            //버거 제출 매서드 호출 예정
-        }
-    }
-
-    #endregion
-
-
-    #region 재료 게임오브젝트 생성, 이동 및 파괴용 지역함수
-    private void GetStatAndPrefab(IngredientStat stat, GameObject prefab)
-    {
-        _currentStat = stat;
-        _currentPrefab = prefab;        
-    }
-
-    private void SpawnInMyBurger()
-    {
-        Transform myBurger = _burgerPlace.GetChild(0);
-        _currentInstance = _poolManager.GetIngredient(_currentStat, _currentPrefab);
-        _currentInstance.transform.position = _burgerPoint;
-        _currentInstance.transform.SetParent(myBurger);
-    }
-    private void ReplaceToBurger()
-    {
-        Transform myBurger = _burgerPlace.GetChild(0);
-        GameObject patty = _currentInstance;
-        patty.transform.SetParent(myBurger);
-        StartCoroutine(SlideToBurger(patty));
-    }
-
-    private IEnumerator SlideToBurger(GameObject ing)
-    {
-        float pos = 0f;
-        Vector3 startPos = ing.transform.position;
-        Vector3 targetPos = _burgerPoint;
-        while(pos < 1f)
-        {
-            pos += Time.deltaTime * 5f;
-            ing.transform.position = Vector3.Lerp(startPos, targetPos, pos);
+            current += Time.deltaTime * 5f;
+            patty.position = Vector3.Lerp(startPos, endPos, current);
             yield return null;
         }
-        SetBurgerPoint();
     }
-
-    private void RemoveIngredient()
-    {
-        _poolManager.ReturnIngredient(_currentInstance);
-        _currentInstance.transform.SetParent(_poolManager.transform);
-    }
-
-    #endregion
-
-
-    #region 재료 배치 후 배치 장소 및 레이어 조정용 하위 지역함수
-    private void SetBurgerPoint()
-    {
-        Transform myBurger = _burgerPlace.GetChild(0);
-        if (myBurger.childCount > 0)
-        {
-            _burgerPoint = myBurger.transform.GetChild(myBurger.childCount - 1).GetChild(0).position;
-        }
-        else
-        {
-            _burgerPoint = myBurger.transform.position;
-        }
-    }
-    private void SetPrefabSort()
-    {
-        _currentInstance.GetComponent<Renderer>().sortingOrder = _currentSort;
-        _currentSort++;
-    }
-    #endregion
-
-
-    #region 비교용 MyBurger에 스탯 정보를 추가 및 삭제하기 위한 지역함수
-    private void AddInMyBurger(IngredientStat stat)
-    {
-        _currentStat = stat;
-        _myburger.AddIngredient(_currentStat);
-    }
-
-    private void RemoveInMyBurger()
-    {
-        _myburger.RemoveIngredient();
-    }
-    #endregion
+    
 }

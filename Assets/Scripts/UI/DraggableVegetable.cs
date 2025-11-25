@@ -2,8 +2,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class DraggableVegetable : DraggableImage
-{
-    [SerializeField] protected IngredientStat _rawStat;
+{    
     [SerializeField] protected GameObject _rawPrefab;
     [SerializeField] protected Transform _targetInRaw;
 
@@ -18,11 +17,11 @@ public class DraggableVegetable : DraggableImage
 
         if (IsDroppdeOnTarget(eventData, _target))
         {
-            _placeManager.PlaceIngredient(_stat, _ingredientPrefab);
+            _placeManager.OnDroppedBurgerPlace(_ingredientPrefab);
         }
         else if (IsDroppdeOnTarget(eventData, _targetInRaw))
         {
-            _placeManager.PrepareVegetable(_rawStat, _rawPrefab);
+            _placeManager.OnDroppedVegetablePlace(_rawPrefab);
         }
     }   
 }

@@ -13,7 +13,7 @@ public class DraggablePatty : DraggableImage
 
         if (IsDroppdeOnTarget(eventData, _target))
         {
-            _placeManager.PlacePattyInGrill(_stat, _ingredientPrefab);
+            _placeManager.OnDroppedPattyPlace(_ingredientPrefab);
         }
     }
 }

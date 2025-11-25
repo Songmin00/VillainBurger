@@ -13,7 +13,8 @@ public class Player : SingleTon<Player>
     protected override void Awake()
     {
         base.Awake();
-        
+        // 제이슨으로 돈, 정수, 레벨 할당하기
+
     }
 
 

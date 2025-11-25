@@ -15,8 +15,7 @@ public class DraggableImage : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
     
     [SerializeField] protected PlaceManager _placeManager;
     [SerializeField] protected GameObject _ingredientPrefab;
-    [SerializeField] protected Transform _target;
-    [SerializeField] protected IngredientStat _stat;
+    [SerializeField] protected Transform _target;    
     
     
 
@@ -64,7 +63,7 @@ public class DraggableImage : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
 
         if (IsDroppdeOnTarget(eventData, _target))
         {
-            _placeManager.PlaceIngredient(_stat, _ingredientPrefab);
+            _placeManager.OnDroppedBurgerPlace(_ingredientPrefab);
         }
     }
 

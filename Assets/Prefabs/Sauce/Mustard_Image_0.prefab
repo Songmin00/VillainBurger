@@ -41,6 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8651831750537685374}
   - component: {fileID: 6732303191746709742}
+  - component: {fileID: 2607395491041687760}
   m_Layer: 0
   m_Name: Mustard_Image_0
   m_TagString: Untagged
@@ -122,3 +123,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2607395491041687760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8231891903663819573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07067e633faed884c93caec47dd58465, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Ingredient
+  Stat: {fileID: 11400000, guid: 548c9ecec52db194ca8a65dbf012f21b, type: 2}

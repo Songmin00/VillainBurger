@@ -3,7 +3,6 @@ using UnityEngine.EventSystems;
 
 public class DraggableBun : DraggableImage
 {
-    [SerializeField] IngredientStat _topBunStat;
     [SerializeField] GameObject _topBunPrefab;
 
     public override void OnEndDrag(PointerEventData eventData)
@@ -18,11 +17,11 @@ public class DraggableBun : DraggableImage
         {
             if (_target.transform.GetChild(0).childCount == 0)
             {
-                _placeManager.PlaceIngredient(_stat, _ingredientPrefab);
+                _placeManager.OnDroppedBurgerPlace(_ingredientPrefab);
             }
             else
             {
-                _placeManager.PlaceIngredient(_topBunStat, _topBunPrefab);
+                _placeManager.OnDroppedBurgerPlace(_topBunPrefab);
             }            
         }        
     }    

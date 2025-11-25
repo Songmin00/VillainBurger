@@ -43,8 +43,7 @@ public class VegetableMinigame : IMinigameState
         {
             Debug.Log("¼º°ø!");
             isRunning = false;
-            _manager.SetState(new IdleState(_manager));
-            _manager.PlaceManager.WinVegetableMinigame();
+            _manager.PlaceManager.WinVegetableGame();
         }
         else if (isRunning)
         {

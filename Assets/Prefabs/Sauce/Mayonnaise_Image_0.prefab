@@ -41,6 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3693955682903007601}
   - component: {fileID: 1500762560004691156}
+  - component: {fileID: 6045837256800978764}
   m_Layer: 0
   m_Name: Mayonnaise_Image_0
   m_TagString: Untagged
@@ -122,3 +123,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6045837256800978764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3732382999168769736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07067e633faed884c93caec47dd58465, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Ingredient
+  Stat: {fileID: 11400000, guid: 394a5b97de38aa148b5a3d6d944a3ec9, type: 2}

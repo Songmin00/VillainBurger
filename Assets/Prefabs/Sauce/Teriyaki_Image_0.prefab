@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8327958302417667032}
   - component: {fileID: 221891729466615446}
+  - component: {fileID: -4498514769777606036}
   m_Layer: 0
   m_Name: Teriyaki_Image_0
   m_TagString: Untagged
@@ -91,6 +92,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-4498514769777606036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1254727377129061835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07067e633faed884c93caec47dd58465, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Ingredient
+  Stat: {fileID: 11400000, guid: 7650a343191afd640af9b41a3786430a, type: 2}
 --- !u!1 &5961904104234990131
 GameObject:
   m_ObjectHideFlags: 0

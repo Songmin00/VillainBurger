@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3556246349518866834}
   - component: {fileID: 9137229790132023063}
+  - component: {fileID: 2158855959132704410}
   m_Layer: 0
   m_Name: Tartar_Image_0
   m_TagString: Untagged
@@ -91,6 +92,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2158855959132704410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2269166699222418926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07067e633faed884c93caec47dd58465, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Ingredient
+  Stat: {fileID: 11400000, guid: 5bf076be41372e1479ef949d87180e1b, type: 2}
 --- !u!1 &4756302043271897615
 GameObject:
   m_ObjectHideFlags: 0

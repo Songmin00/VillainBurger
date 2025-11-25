@@ -41,6 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8273375537261811825}
   - component: {fileID: 7067574417467509311}
+  - component: {fileID: 4745304083871473607}
   m_Layer: 0
   m_Name: Onion_Image_0
   m_TagString: Untagged
@@ -122,3 +123,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4745304083871473607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8264920044075078283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07067e633faed884c93caec47dd58465, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Ingredient
+  Stat: {fileID: 11400000, guid: e97410cf957d02148bc3b8e53ead7298, type: 2}

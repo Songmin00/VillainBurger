@@ -3,59 +3,67 @@ using UnityEngine;
 
 public class IngredientPool
 {
+    private Stack<IPoolable> _pool = new Stack<IPoolable>();
     private GameObject _prefab;
     private int _firstInit = 2;
-
-    private Stack<GameObject> pool = new Stack<GameObject>();
-
-    public IngredientPool(GameObject prefab)
+    private Transform _parent;
+    
+    //생성자
+    public IngredientPool(GameObject prefab, Transform parent)
     {
         _prefab = prefab;
-        Init();
+        Init();        
+        _parent = parent;
     }
     
-    public GameObject GetIngredient() //Transform parent, Vector2 pos
+
+
+
+    public IPoolable GetIngredient()
     {
-        GameObject ing;
-        if (pool.Count > 0)
+        IPoolable ing;
+        if (_pool.Count > 0)
         {
-            ing = WakeUp();
+            ing = Get();
         }
         else
         {
             ing = Create();            
-        }
-        //ing.transform.parent = parent;
-        //ing.transform.localPosition = pos;
+        }        
         return ing;
     }    
 
     public void ReturnToPool(GameObject ing)
     {
-        ing.SetActive(false);
-        pool.Push(ing);
+        ing.GetComponent<IPoolable>().OnReturn(_parent);
+        _pool.Push(ing.GetComponent<IPoolable>());
     }
 
+
+
+
+    //지역함수
     private void Init()
     {
         for (int i = 0; i < _firstInit; i++)
         {
-            GameObject newIng = Create();
-            newIng.SetActive(false);
+            IPoolable newIng = Create();            
         }
     }
 
-    private GameObject WakeUp()
+    private IPoolable Get()
     {
-        GameObject ing = pool.Pop();
-        ing.SetActive(true);
+        IPoolable ing = _pool.Pop();
+        ing.OnGet();
         return ing;
     }
 
-    private GameObject Create()
+    private IPoolable Create()
     {
         GameObject newIng =  MonoBehaviour.Instantiate(_prefab);
-        pool.Push(newIng);
-        return newIng;
+        IPoolable poolable = newIng.GetComponent<IPoolable>();
+        poolable.OnCreate(_parent);
+        _pool.Push(poolable);
+        return poolable;
     }
 }

@@ -46,7 +46,7 @@ public class ToppingMinigame : IMinigameState
         if (_randomCommand.Count == 0)
         {
             Debug.Log("성공!");
-            _manager.SetState(new IdleState(_manager));            
+            _manager.PlaceManager.WinToppingGame();
         }
     }
 
@@ -87,9 +87,8 @@ public class ToppingMinigame : IMinigameState
         }
         else
         {
-            Debug.Log("실패");
-            _manager.SetState(new IdleState(_manager));
-            _manager.PlaceManager.FailToppingMinigame();
+            Debug.Log("실패");            
+            _manager.PlaceManager.FailToppingGame();
         }
     }
 
