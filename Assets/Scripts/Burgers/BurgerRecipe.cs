@@ -6,10 +6,10 @@ public class BurgerRecipe : ScriptableObject
 {
     [SerializeField] private BurgerType _type;
     [SerializeField] private string _name = "¹ö°Å";
-    [SerializeField] private List<IngredientStat> _patty;
-    [SerializeField] private List<IngredientStat> _sauce;       
-    [SerializeField] private List<IngredientStat> _topping;
-    [SerializeField] private List<IngredientStat> _vegetable;
+    [SerializeField] private List<IngredientStat> _patty = new List<IngredientStat>();
+    [SerializeField] private List<IngredientStat> _sauce = new List<IngredientStat>();
+    [SerializeField] private List<IngredientStat> _topping = new List<IngredientStat>();
+    [SerializeField] private List<IngredientStat> _vegetable = new List<IngredientStat>();
 
     public BurgerType Type => _type;
     public string Name => _name;

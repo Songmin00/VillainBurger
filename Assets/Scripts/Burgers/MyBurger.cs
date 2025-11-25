@@ -9,7 +9,8 @@ public class MyBurger : MonoBehaviour
 
     private void Awake()
     {
-        
+        _currentStat = new IngredientStat();
+        BurgerRecipe = new BurgerRecipe();
     }
 
     public void AddIngredient(IngredientStat stat)
