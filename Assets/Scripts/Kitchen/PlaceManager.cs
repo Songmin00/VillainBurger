@@ -173,19 +173,19 @@ public class PlaceManager : MonoBehaviour
     {
         Transform myBurger = _burgerPlace.GetChild(0);
         GameObject patty = _currentInstance;
-        patty.transform.SetParent(_burgerPlace);
+        patty.transform.SetParent(myBurger);
         StartCoroutine(SlideToBurger(patty));
     }
 
     private IEnumerator SlideToBurger(GameObject ing)
     {
-        float t = 0f;
+        float pos = 0f;
         Vector3 startPos = ing.transform.position;
         Vector3 targetPos = _burgerPoint;
-        while(t < 1f)
+        while(pos < 1f)
         {
-            t += Time.deltaTime * 5f;
-            ing.transform.position = Vector3.Lerp(startPos, targetPos, t);
+            pos += Time.deltaTime * 5f;
+            ing.transform.position = Vector3.Lerp(startPos, targetPos, pos);
             yield return null;
         }
     }
