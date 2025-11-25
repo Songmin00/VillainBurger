@@ -3,18 +3,19 @@ using UnityEngine;
 
 public class StoreManager : MonoBehaviour
 {
-    private BurgerMenu _menu;
+    [SerializeField] private BurgerMenu _menu;
     [SerializeField] private MyBurger _myBurger;
-    private List<BurgerRecipe> _orderList;
-    private int _orderCount = 10;
+    public List<BurgerRecipe> OrderList {  get; set; }
+    public int OrderCount { get; set; } = 4;
   
 
 
     private void Awake()
     {
-        for (int i = 0; i < _orderCount; i++)
+        OrderList = new List<BurgerRecipe>();
+        for (int i = 0; i < OrderCount; i++)
         {
-            _orderList.Add(_menu.AllBurgers[i]);
+            OrderList.Add(_menu.AllBurgers[i]);
         }
     }
 
@@ -23,7 +24,7 @@ public class StoreManager : MonoBehaviour
     public BurgerRecipe IdentifyBurger()
     {
         Dictionary<IngredientStat, int>  myDic = TransIntoDictionary(_myBurger.BurgerRecipe);
-        foreach (var burger in _orderList)
+        foreach (var burger in OrderList)
         {
             Dictionary<IngredientStat, int>  orderDic = TransIntoDictionary(burger);
             

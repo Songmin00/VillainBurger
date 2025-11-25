@@ -18,11 +18,11 @@ public class DraggableVegetable : DraggableImage
 
         if (IsDroppdeOnTarget(eventData, _target))
         {
-            _manager.PlaceIngredient(_stat, _ingredientPrefab);
+            _placeManager.PlaceIngredient(_stat, _ingredientPrefab);
         }
         else if (IsDroppdeOnTarget(eventData, _targetInRaw))
         {
-            _manager.PrepareVegetable(_rawStat, _rawPrefab);
+            _placeManager.PrepareVegetable(_rawStat, _rawPrefab);
         }
     }   
 }

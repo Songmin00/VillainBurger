@@ -18,11 +18,11 @@ public class DraggableBun : DraggableImage
         {
             if (_target.transform.GetChild(0).childCount == 0)
             {
-                _manager.PlaceIngredient(_stat, _ingredientPrefab);
+                _placeManager.PlaceIngredient(_stat, _ingredientPrefab);
             }
             else
             {
-                _manager.PlaceIngredient(_topBunStat, _topBunPrefab);
+                _placeManager.PlaceIngredient(_topBunStat, _topBunPrefab);
             }            
         }        
     }    

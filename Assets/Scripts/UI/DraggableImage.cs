@@ -13,7 +13,7 @@ public class DraggableImage : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
     protected CanvasGroup _canvasGroup;
     protected Vector3 _originalTransform;
     
-    [SerializeField] protected PlaceManager _manager;
+    [SerializeField] protected PlaceManager _placeManager;
     [SerializeField] protected GameObject _ingredientPrefab;
     [SerializeField] protected Transform _target;
     [SerializeField] protected IngredientStat _stat;
@@ -24,6 +24,10 @@ public class DraggableImage : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
     {        
         _canvasGroup = gameObject.AddComponent<CanvasGroup>();
         _originalTransform = transform.localPosition;
+        
+            _placeManager = FindFirstObjectByType<PlaceManager>();
+        
+        
     }
 
     
@@ -60,7 +64,7 @@ public class DraggableImage : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
 
         if (IsDroppdeOnTarget(eventData, _target))
         {
-            _manager.PlaceIngredient(_stat, _ingredientPrefab);
+            _placeManager.PlaceIngredient(_stat, _ingredientPrefab);
         }
     }
 
